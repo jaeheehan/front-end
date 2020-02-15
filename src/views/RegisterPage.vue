@@ -35,7 +35,7 @@
 
 <script>
 import registrationService from '@/services/registration'
-import { required, email, minLength, maxLength, alphaNum } from 'Vuelidate/lib/validators'
+import { required, email, minLength, maxLength, alphaNum } from 'vuelidate/lib/validators'
 
 export default {
   name: 'RegisterPage',
