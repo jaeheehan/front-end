@@ -9,12 +9,15 @@
         <form @submit.prevent="submitForm">
           <div v-show="errorMessage" class="alert alert-danger failed">{{errorMessage}}</div>
           <div class="form-group">
+            <label for="username">Username</label>
             <input type="text" class="form-control" id="username" v-model="form.username">
           </div>
           <div class="form-group">
+            <label for="emailAddress">Email address</label>
             <input type="email" class="form-control" id="emailAddress" v-model="form.emailAddress">
           </div>
           <div class="form-group">
+            <label for="password">Password</label>
             <input type="password" class="form-control" id="password" v-model="form.password">
           </div>
           <button type="submit" class="btn btn-primary btn-block">Create account</button>
