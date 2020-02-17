@@ -1,9 +1,16 @@
 module.exports = {
-  'login test': function (browser) {
-    browser
-      .url(process.env.VUE_DEV_SERVER_URL + 'login')
-      .waitForElementVisible('#app', 5000)
-      .assert.containsText('h1', 'TaskAgile')
-      .end()
+  'login page renders elements': function (browser) {
+    const loginPage = browser.page.LoginPage()
+    console.log(loginPage)
+
+    loginPage
+      .navigate()
+      .waitForElementVisible('@app', 500)
+      .assert.visible('@usernameInput')
+      .assert.visible('@passwordInput')
+      .assert.visible('@submitButton')
+      .assert.hidden('@formError')
+
+    browser.end()
   }
 }
