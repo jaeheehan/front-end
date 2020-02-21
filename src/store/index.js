@@ -9,7 +9,8 @@ Vue.use(Vuex)
 
 const state = {
   user: {
-    name: null
+    name: null,
+    authenticated: false
   },
   teams: [],
   boards: []
@@ -20,5 +21,5 @@ export default new Vuex.Store({
   getters,
   mutations,
   actions,
-  plugins: process.env.NODE_ENV !== 'production' ? [createLogger()] : []
+  plugins: process.env.NODE_ENV !== 'production' ? [createLogger()] : [createLogger()]
 })

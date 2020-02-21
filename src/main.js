@@ -23,6 +23,8 @@ axios.interceptors.response.use(
 Vue.use(Vuelidate)
 Vue.config.productionTip = false
 
+Vue.config.devtools = true
+
 // Set up FontAwesome
 faLibrary.add(faHome, faSearch, faPlus)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
